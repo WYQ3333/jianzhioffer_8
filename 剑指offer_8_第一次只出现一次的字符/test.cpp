@@ -31,7 +31,7 @@ public:
 
 int main(){
 	Solution s;
-	cout<<s.FirstNotRepeatingChar("hello world")<<endl;
+	cout<<s.FirstNotRepeatingChar("hhello world")<<endl;
 	system("pause");
 	return 0;
 }
