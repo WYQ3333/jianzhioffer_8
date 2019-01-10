@@ -18,11 +18,12 @@ public:
 		}
 		int minpos = 0;
 		for (i = 0; i < 26; ++i){
+			int cur = 0;
 			if (array[i] == 1){
-				int temp = str.find('a' + array[i], 0);
-			}
-			if (temp < minpos){
-				minpos = temp;
+				cur = str.find('a' + array[i], 0);
+				if (cur < minpos){
+					minpos = cur;
+				}
 			}
 		}
 		return minpos;
