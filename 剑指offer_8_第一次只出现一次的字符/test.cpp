@@ -16,11 +16,14 @@ public:
 			}
 			++array[temp];
 		}
+		char c;
 		for (i = 0; i < 26; ++i){
 			if (array[i] == 1){
-				return i;
+				c = array[i];
 			}
 		}
+		int result = str.find(c, 0);
+		return result;
 	}
 };
 
