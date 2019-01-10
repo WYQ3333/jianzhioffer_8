@@ -19,7 +19,7 @@ public:
 		char c;
 		for (i = 0; i < 26; ++i){
 			if (array[i] == 1){
-				c = array[i];
+				c = array[i]+'a';
 			}
 		}
 		int result = str.find(c, 0);
