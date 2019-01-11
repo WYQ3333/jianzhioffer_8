@@ -20,7 +20,7 @@ public:
 			}
 		}
 		int minpos = str.size();
-		for (i = 0; i < 26; ++i){
+		for (i = 0; i < 100; ++i){
 			int cur = 0;
 			if (array[i] == 1){
 				char ch = 'A' + i;
@@ -42,7 +42,7 @@ public:
 
 int main(){
 	Solution s;
-	cout << s.FirstNotRepeatingChar("asdfguhjklasdfghjklasdfghjklasdfghjklasdfghjkl") << endl;
+	cout << s.FirstNotRepeatingChar("google") << endl;
 	system("pause");
 	return 0;
 }
