@@ -7,6 +7,9 @@ using namespace std;
 class Solution {
 public:
 	int FirstNotRepeatingChar(string str) {
+		if (str.size() <= 0){
+			return -1;
+		}
 		int array[26] = { 0 };
 		int i = 0;
 		int temp = 0;
@@ -27,13 +30,19 @@ public:
 				}
 			}
 		}
-		return minpos;
+		if (minpos>0 && minpos<str.size()){
+			return minpos;
+		}
+		else{
+			return -1;
+		}
+
 	}
 };
 
 int main(){
 	Solution s;
-	cout<<s.FirstNotRepeatingChar("hhello world")<<endl;
+	cout << s.FirstNotRepeatingChar("asdfguhjklasdfghjklasdfghjklasdfghjklasdfghjkl") << endl;
 	system("pause");
 	return 0;
 }
