@@ -16,11 +16,12 @@ public:
 				++array[temp];
 			}
 		}
-		int minpos = 0;
+		int minpos = str.size();
 		for (i = 0; i < 26; ++i){
 			int cur = 0;
 			if (array[i] == 1){
-				cur = str.find('a' + array[i], 0);
+				char ch = 'a' + i;
+				cur = str.find(ch, 0);
 				if (cur < minpos){
 					minpos = cur;
 				}
