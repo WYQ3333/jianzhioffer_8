@@ -10,11 +10,11 @@ public:
 		if (str.size() <= 0){
 			return -1;
 		}
-		int array[26] = { 0 };
+		int array[100] = { 0 };
 		int i = 0;
 		int temp = 0;
 		for (i = 0; i < str.size(); ++i){
-			temp = str[i] - 'a';
+			temp = str[i] - 'A';
 			if (array[temp] <= 1){
 				++array[temp];
 			}
@@ -23,14 +23,14 @@ public:
 		for (i = 0; i < 26; ++i){
 			int cur = 0;
 			if (array[i] == 1){
-				char ch = 'a' + i;
+				char ch = 'A' + i;
 				cur = str.find(ch, 0);
 				if (cur < minpos){
 					minpos = cur;
 				}
 			}
 		}
-		if (minpos>0 && minpos<str.size()){
+		if (minpos>0 && minpos<100){
 			return minpos;
 		}
 		else{
