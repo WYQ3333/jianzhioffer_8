@@ -30,19 +30,18 @@ public:
 				}
 			}
 		}
-		if (minpos>0 && minpos<100){
+		if (minpos>=0 && minpos<100){
 			return minpos;
 		}
 		else{
 			return -1;
 		}
-
 	}
 };
 
 int main(){
 	Solution s;
-	cout << s.FirstNotRepeatingChar("google") << endl;
+	cout << s.FirstNotRepeatingChar("zuDClOWjkPNhb") << endl;
 	system("pause");
 	return 0;
 }
